@@ -1,0 +1,125 @@
+{
+  "info": {
+    "_postman_id": "12345678-1234-1234-1234-123456789012",
+    "name": "otus-project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Notes by Task ID",
+      "request": {
+        "url": "http://localhost:8189/notes?taskId={{taskId}}",
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": "Get all notes for a specific task"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Note by ID and Task ID",
+      "request": {
+        "url": "http://localhost:8189/notes/{{noteId}}?taskId={{taskId}}",
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": "Get a specific note for a specific task"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Note by ID and Task ID",
+      "request": {
+        "url": "http://localhost:8189/notes/{{noteId}}?taskId={{taskId}}",
+        "method": "DELETE",
+        "header": [],
+        "body": {},
+        "description": "Delete a specific note for a specific task"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete All Notes by Task ID",
+      "request": {
+        "url": "http://localhost:8189/notes?taskId={{taskId}}",
+        "method": "DELETE",
+        "header": [],
+        "body": {},
+        "description": "Delete all notes for a specific task"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Tasks by Title",
+      "request": {
+        "url": "http://localhost:8189/tasks?title={{title}}",
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": "Get all tasks with a specific title"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Tasks by Status",
+      "request": {
+        "url": "http://localhost:8189/tasks?status={{status}}",
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": "Get all tasks with a specific status"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Tasks by Status and Due Date",
+      "request": {
+        "url": "http://localhost:8189/tasks?status={{status}}&dueDate={{dueDate}}",
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": "Get all tasks with a specific status and due date"
+      },
+      "response": []
+    },
+    {
+      "name": "Get Tasks by Title and Status",
+      "request": {
+        "url": "http://localhost:8189/tasks?title={{title}}&status={{status}}",
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": "Get all tasks with a specific title and status"
+      },
+      "response": []
+    },
+    {
+      "name": "Update Task",
+      "request": {
+        "url": "http://localhost:8189/tasks/{{taskId}}",
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"title\": \"New Title\", \"description\": \"New Description\", \"status\": \"New\", \"dueDate\": \"2022-12-31T23:59:59Z\", \"assignedTo\": \"userId\" }"
+        },
+        "description": "Update a specific task"
+      },
+      "response": []
+    },
+    {
+      "name": "Update Note",
+      "request": {
+        "url": "http://localhost:8189/notes/{{noteId}}",
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"content\": \"New Content\" }"
+        },
+        "description": "Update a specific note"
+      },
+      "response": []
+    }
+  ]
+}
