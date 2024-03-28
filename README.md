@@ -7,6 +7,7 @@
 
 # Структура проекта TaskManager
 
+```plaintext
 /ru.otus.task.manager
 ├──postman-collections
 │  └──otus-project.postman_collection.json
@@ -100,7 +101,7 @@
 ├── package-lock.json
 ├── README.md
 └── settings.gradle
-
+```
 ## Технологии
 - Java 17
 - Spring Boot 2.7.8
