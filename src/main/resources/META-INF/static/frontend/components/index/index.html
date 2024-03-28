@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<header>
+    <h1>Task Manager</h1>
+</header>
+<main>
+    <section id="task-form" class="task-form">
+        <h2>Add a New Task</h2>
+        <form id="add-task-form">
+            <label for="task-title">Task Title:</label>
+            <input type="text" id="task-title" name="task-title" placeholder="Task Title" required>
+            <label for="task-description">Task Description:</label>
+            <textarea id="task-description" name="task-description" placeholder="Task Description" required></textarea>
+            <button id="add-task-btn" type="submit">Add Task</button>
+        </form>
+    </section>
+    <section id="update-task-form" class="task-form" style="display: none;">
+        <h2>Update Task</h2>
+        <form id="update-task-form">
+            <label for="update-task-title">New Title:</label>
+            <input type="text" id="update-task-title" name="update-task-title" placeholder="New Title" required>
+            <label for="update-task-description">New Description:</label>
+            <textarea id="update-task-description" name="update-task-description" placeholder="New Description"
+                      required></textarea>
+            <label for="update-task-status">New Status:</label>
+            <input type="text" id="update-task-status" name="update-task-status" placeholder="New Status" required>
+            <label for="update-task-dueDate">Due Date:</label>
+            <input type="date" id="update-task-dueDate" name="update-task-dueDate" required>
+            <label for="update-task-assignedTo">Assigned To:</label>
+            <input type="text" id="update-task-assignedTo" name="update-task-assignedTo" placeholder="Assigned To"
+                   required>
+            <button id="update-task-btn" type="submit">Update Task</button>
+        </form>
+    </section>
+    <section id="task-list" class="task-list"></section>
+</main>
+<script src="../scripts/script.js"></script>
+</body>
+</html>
