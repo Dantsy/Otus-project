@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "spring.flyway.username",
+      "type": "java.lang.String",
+      "description": "Description for spring.flyway.username."
+    }
+  ]
+}

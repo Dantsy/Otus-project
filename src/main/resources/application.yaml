@@ -1,0 +1,35 @@
+server:
+  port: 8189
+
+spring:
+  profiles:
+    active: dev
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+  flyway:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+    schemas:
+      - V1__init
+    driver-class-name: org.postgresql.Driver
+    enabled: true
+
+  jpa:
+    open-in-view: false
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.data.r2dbc: DEBUG
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  flyway:
+    enabled: true
